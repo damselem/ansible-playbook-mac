@@ -1,0 +1,26 @@
+# vim:syntax=sh
+
+# The order in which these files are loaded is the following:
+# - /etc/zshenv
+# - ~/.zshenv
+# - /etc/zprofile
+# - ~/.zprofile
+# - /etc/zshrc
+# - ~/.zshrc
+
+# Since /etc/zshenv does not exist, we load the initial paths using path_helper
+# If ZSH_ENV_PATH is defined, it means that path_helper was already executed
+
+if [[ -x /usr/libexec/path_helper && -z $PATH_HELPER_EXECUTED ]]; then
+  eval `/usr/libexec/path_helper -s`
+  export PATH_HELPER_EXECUTED=true
+fi
+
+ZSH_DIR={{ dotfiles_target_dir }}/zsh
+
+source $ZSH_DIR/path
+source $ZSH_DIR/config
+source $ZSH_DIR/aliases
+
+# Copy the buit path so we can restore it in .zprofile after /etc/zprofile runs
+export ZSH_ENV_PATH=$PATH

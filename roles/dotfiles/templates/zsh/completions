@@ -1,0 +1,13 @@
+# vim:syntax=sh
+
+# Load ZSH completion functions
+fpath=({{ homebrew_path }}/share/zsh-completions $fpath)
+
+# Completion
+autoload -U compinit
+compinit
+
+# GCloud completions
+if [[ -f ~/.google-cloud-sdk/completion.zsh.inc ]]; then
+  source ~/.google-cloud-sdk/completion.zsh.inc
+fi

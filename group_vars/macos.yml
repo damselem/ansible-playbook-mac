@@ -1,0 +1,83 @@
+---
+# Dotfiles
+dotfiles_symlinks:
+  - ctags
+  - gemrc
+  - gitconfig
+  - gradle
+  - jupyter
+  - tmux.conf
+  - vimrc
+  - zprofile
+  - zshenv
+  - zshrc
+
+# Homebrew
+homebrew_prefix: "{{ ansible_env.HOME }}"
+homebrew_install_path: "{{ homebrew_prefix }}/.homebrew"
+homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"
+homebrew_prefix_owner: "{{ ansible_user_id }}"
+homebrew_taps:
+  - caskroom/versions
+  - homebrew/fuse
+  - homebrew/science
+  - homebrew/services
+homebrew_uninstalled_packages:
+  - ctags
+  - dockutil
+  - git-crypt
+  - go-delve/delve/delve
+  - jetty
+  - mas
+  - nginx
+  - phantomjs
+  - postgres
+  - protobuf
+  - sshfs
+  - yarn
+homebrew_installed_packages:
+  - awscli
+  - bazaar
+  - chromedriver
+  - coreutils
+  - docker
+  - docker-compose
+  - go
+  - gpg2
+  - maven
+  - mercurial
+  - nmap
+  - pyenv
+  - rbenv
+  - rclone
+  - reattach-to-user-namespace
+  - ruby-build
+  - sqlite
+  - the_silver_searcher
+  - tldr
+  - tmux
+  - tree
+  - upx
+  - vim
+  - zlib
+  - zplug
+homebrew_cask_apps:
+  - 1password
+  - caffeine
+  - docker
+  - flux
+  - google-cloud-sdk
+  - gpg-suite
+  - intellij-idea
+  - iterm2
+  - java
+  - osxfuse
+  - rowanj-gitx
+  - sizeup
+  - telegram
+  - the-unarchiver
+  - vagrant
+  - virtualbox
+  - visual-studio-code
+  - vlc
+  - whatsapp

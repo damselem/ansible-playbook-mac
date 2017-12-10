@@ -1,0 +1,40 @@
+# vim:syntax=sh
+
+source $ZSH_DIR/envs
+
+# JAVA
+if [[ ":$PATH:" != *":$JAVA_HOME/bin:"* ]]; then
+  PATH=$JAVA_HOME/bin:$PATH
+fi
+
+# HOMEBREW PATH
+if [[ ":$PATH:" != *":{{ homebrew_bin_path }}:"* ]]; then
+  PATH={{ homebrew_bin_path }}:$PATH
+fi
+if [[ ":$PATH:" != *":{{ homebrew_path }}/sbin:"* ]]; then
+  PATH={{ homebrew_path }}/sbin:$PATH
+fi
+
+# GO PATH
+if [[ ":$PATH:" != *":$HOME/go/bin:"* ]]; then
+  PATH=$PATH:$HOME/go/bin
+fi
+
+# GLOUD PATH
+if [[ ":$PATH:" != *":$HOME/.google-cloud-sdk/bin:"* ]]; then
+  PATH=$PATH:$HOME/.google-cloud-sdk/bin
+fi
+
+# PYENV
+if which pyenv > /dev/null; then
+  # Make sure we don't add it twice to the path
+  eval "$(pyenv init -)"
+fi
+
+# RBENV
+if which rbenv > /dev/null; then
+  # Make sure we don't add it twice to the path
+  eval "$(rbenv init -)"
+fi
+
+export PATH

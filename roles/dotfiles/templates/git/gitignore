@@ -1,0 +1,13 @@
+# Mac OS X #
+############
+*.DS_Store
+
+# VIM #
+#######
+TAGS
+tags
+.*.sw*
+*~
+*.un~
+**.orig
+.netrwhist

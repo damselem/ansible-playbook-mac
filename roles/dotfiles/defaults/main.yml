@@ -1,0 +1,7 @@
+---
+dotfiles_target_dir: "{{ ansible_env.HOME }}/.dotfiles"
+tmux_target_dir: "{{ ansible_env.HOME }}/.tmux"
+vim_target_dir: "{{ ansible_env.HOME }}/.vim"
+zplug_target_dir: "{{ ansible_env.HOME }}/.zplug"
+homebrew_install_path: "{{ ansible_env.HOME }}/.homebrew"
+homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"

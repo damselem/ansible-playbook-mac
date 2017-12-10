@@ -1,0 +1,19 @@
+# vim:syntax=sh
+
+export ZPLUG_HOME={{ zplug_target_dir }}
+export ZPLUG_LOADFILE={{ dotfiles_target_dir }}/zsh/plugins
+
+source {{ homebrew_path }}/opt/zplug/init.zsh
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+  echo
+fi
+
+zplug load
+
+# Override pure prompt color
+PROMPT='%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '

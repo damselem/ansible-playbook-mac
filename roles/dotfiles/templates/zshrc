@@ -1,0 +1,19 @@
+# vim:syntax=sh
+
+ZSH_DIR={{ dotfiles_target_dir }}/zsh
+
+source $ZSH_DIR/completions
+source $ZSH_DIR/history
+source $ZSH_DIR/zplug
+
+# makes color constants available
+autoload -U colors
+colors
+
+# enable colored output from ls, etc
+export CLICOLOR=1
+
+# Initialize FZF settings
+if [[ -f ~/.fzf.zsh ]]; then
+  source ~/.fzf.zsh
+fi

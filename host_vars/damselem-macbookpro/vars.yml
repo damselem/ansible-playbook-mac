@@ -1,0 +1,13 @@
+---
+# Ansible
+ansible_host: localhost
+ansible_connection: local
+ansible_user: damselem
+
+# Homebrew
+homebrew_prefix_group: eng
+homebrew_install_path_group: eng
+homebrew_brew_bin_path_group: eng
+
+# SSH
+ssh_config_group: eng
