@@ -22,22 +22,10 @@ homebrew_taps:
   - homebrew/fuse
   - homebrew/science
   - homebrew/services
-homebrew_uninstalled_packages:
-  - ctags
-  - dockutil
-  - git-crypt
-  - go-delve/delve/delve
-  - jetty
-  - mas
-  - nginx
-  - phantomjs
-  - postgres
-  - protobuf
-  - sshfs
-  - yarn
 homebrew_installed_packages:
   - awscli
   - bazaar
+  - bazel
   - chromedriver
   - coreutils
   - docker
