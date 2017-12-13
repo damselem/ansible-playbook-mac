@@ -68,4 +68,5 @@ homebrew_cask_apps:
   - virtualbox
   - visual-studio-code
   - vlc
+  - xquartz
   - whatsapp
