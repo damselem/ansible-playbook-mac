@@ -19,6 +19,7 @@ homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"
 homebrew_prefix_owner: "{{ ansible_user_id }}"
 homebrew_taps:
   - caskroom/versions
+  - caskroom/fonts
   - homebrew/fuse
   - homebrew/science
   - homebrew/services
@@ -54,6 +55,7 @@ homebrew_cask_apps:
   - caffeine
   - docker
   - flux
+  - font-dejavu-sans
   - google-cloud-sdk
   - gpg-suite
   - intellij-idea
@@ -68,5 +70,5 @@ homebrew_cask_apps:
   - virtualbox
   - visual-studio-code
   - vlc
-  - xquartz
   - whatsapp
+  - xquartz

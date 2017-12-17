@@ -9,12 +9,12 @@ bin/galaxy
 ## Run playbook in production
 
 ```
-ansible-playbook playbook.yml --ask-sudo-pass --ask-vault-pass
+ansible-playbook playbook.yml
 ```
 
 ## Run playbook in development
 
 ```
 vagrant up
-ansible-playbook playbook.yml --ask-vault-pass
+ansible-playbook playbook.yml
 ```
