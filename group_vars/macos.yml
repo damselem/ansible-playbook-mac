@@ -33,6 +33,7 @@ homebrew_installed_packages:
   - docker-compose
   - go
   - gpg2
+  - gradle
   - maven
   - mercurial
   - nmap
