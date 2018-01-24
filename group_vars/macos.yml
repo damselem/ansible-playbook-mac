@@ -26,7 +26,6 @@ homebrew_taps:
 homebrew_installed_packages:
   - awscli
   - bazaar
-  - bazel
   - chromedriver
   - coreutils
   - docker
@@ -43,7 +42,6 @@ homebrew_installed_packages:
   - reattach-to-user-namespace
   - ruby-build
   - sqlite
-  - the_silver_searcher
   - tldr
   - tmux
   - tree

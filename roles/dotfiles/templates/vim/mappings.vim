@@ -4,7 +4,7 @@ map <silent> <leader>e :NERDTreeToggle<CR>
 " Comment current line
 map <silent> <leader>, <leader>c<space>
 " Search using ag
-nnoremap <leader>a :Grepper -tool ag -open -switch<cr>
+nnoremap <leader>a :Grepper -tool grep -open -switch<cr>
 " Remove highlighting on search results
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 " Index ctags on the current directory
@@ -13,8 +13,6 @@ map <Leader>ct :!ctags -R .<CR><CR>
 map <C-P> :FZF<CR>
 " Toggle TagBar
 nnoremap <silent> <Leader>B :TagbarToggle<CR>
-" JsDoc
-nmap <silent> <Leader>js ?function<cr>:noh<cr><Plug>(jsdoc)
 
 " Move to left split window.
 nnoremap <A-D-Left> <C-w>h

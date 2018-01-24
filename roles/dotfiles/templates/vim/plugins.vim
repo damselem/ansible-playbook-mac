@@ -26,12 +26,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-endwise'
 
 " Filetype - Javascript
-Plug 'briancollins/vim-jst',       { 'for': ['javascript', 'coffee'] }
-Plug 'kchmck/vim-coffee-script',   { 'for': 'coffee' }
+Plug 'briancollins/vim-jst',       { 'for': 'javascript' }
 Plug 'pangloss/vim-javascript',    { 'for': 'javascript' }
 Plug 'elzr/vim-json',              { 'for': 'json' }
 Plug 'digitaltoad/vim-pug',        { 'for': 'pug' }
-Plug 'heavenshell/vim-jsdoc',      { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " Filetype - Docker
