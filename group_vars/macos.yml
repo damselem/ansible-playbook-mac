@@ -33,6 +33,7 @@ homebrew_installed_packages:
   - go
   - gpg2
   - gradle
+  - jenv
   - maven
   - mercurial
   - nmap

@@ -37,4 +37,10 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+# JENV
+if which jenv > /dev/null; then
+  # Make sure we don't add it twice to the path
+  eval "$(jenv init -)"
+fi
+
 export PATH
