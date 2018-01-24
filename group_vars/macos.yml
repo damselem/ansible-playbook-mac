@@ -42,6 +42,7 @@ homebrew_installed_packages:
   - reattach-to-user-namespace
   - ruby-build
   - sqlite
+  - sshfs
   - tldr
   - tmux
   - tree
