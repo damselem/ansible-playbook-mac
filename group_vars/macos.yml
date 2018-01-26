@@ -44,6 +44,7 @@ homebrew_installed_packages:
   - ruby-build
   - sqlite
   - sshfs
+  - terraform
   - tldr
   - tmux
   - tree
