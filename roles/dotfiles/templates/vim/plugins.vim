@@ -47,5 +47,8 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 " Filetype - Python
 Plug 'klen/python-mode', { 'for': 'python' }
 
+" Filetype - Terraform
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+
 " Add plugins to &runtimepath
 call plug#end()
