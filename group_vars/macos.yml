@@ -38,6 +38,7 @@ homebrew_installed_packages:
   - jenv
   - maven
   - mercurial
+  - neovim
   - nmap
   - pyenv
   - rbenv
