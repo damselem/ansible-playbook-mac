@@ -1,4 +1,3 @@
-
 " Toggle NERDTree panel
 map <silent> <leader>e :NERDTreeToggle<CR>
 " Comment current line

@@ -1,6 +1,6 @@
-set rtp+={{ vim_target_dir }}
+set rtp+={{ nvim_target_dir }}
 
-call plug#begin('{{ vim_target_dir }}/plugged')
+call plug#begin('{{ nvim_target_dir }}/plugged')
 
 " General
 Plug 'vim-airline/vim-airline'
@@ -21,6 +21,10 @@ Plug 'tpope/vim-surround'
 
 " Color scheme
 Plug 'altercation/vim-colors-solarized'
+
+" Completion
+Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
+Plug 'roxma/nvim-completion-manager'
 
 " Filetype
 Plug 'tpope/vim-endwise'

@@ -1,8 +1,9 @@
 ---
 # Dotfiles
 dotfiles_symlinks:
-  - ctags
+  - config/nvim
   - gemrc
+  - git
   - gitconfig
   - gradle
   - jupyter
@@ -52,7 +53,6 @@ homebrew_installed_packages:
   - tmux
   - tree
   - upx
-  - vim
   - zlib
   - zplug
 homebrew_cask_apps:

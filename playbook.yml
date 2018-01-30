@@ -1,8 +1,8 @@
 ---
 - name: Mac OS X Ansible play
   hosts: damselem-macbookpro
-  tasks:
-    - include_tasks: "tasks/{{ ansible_hostname }}.yml"
+  pre_tasks:
+    - include_tasks: "tasks/pre/{{ ansible_hostname }}.yml"
   roles:
     - ansible-role-homebrew
     - ansible-role-sshconfig
