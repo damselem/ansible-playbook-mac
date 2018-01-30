@@ -23,6 +23,7 @@ homebrew_taps:
   - homebrew/fuse
   - homebrew/science
   - homebrew/services
+  - damselem/repo
 homebrew_installed_packages:
   - awscli
   - bazaar
