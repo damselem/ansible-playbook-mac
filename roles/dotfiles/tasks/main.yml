@@ -48,6 +48,8 @@
   pip:
     name: neovim
     executable: pip3.6
+  environment:
+    PYENV_VERSION: 3.6.3
 
 - name: Install Neovim plugins
   shell: "vim +PlugInstall +UpdateRemotePlugins +qa"
