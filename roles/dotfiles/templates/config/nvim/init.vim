@@ -10,7 +10,7 @@ set nobackup " Don't make backups
 set noswapfile " Don't use swap file
 
 set clipboard=unnamed " Share OS X and Vim clipboard
-set completeopt-=preview " Do not show omnicomplete preview window
+set completeopt=menuone,noinsert
 set wildmode=list:longest,list:full " Complete files like a shell
 
 set ignorecase " Case-insensitive searching
@@ -74,6 +74,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:tagbar_autoclose = 0
 let g:vim_json_syntax_conceal = 0
 let g:tmuxline_powerline_separators = 0
+let g:deoplete#enable_at_startup = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTOCOMMANDS

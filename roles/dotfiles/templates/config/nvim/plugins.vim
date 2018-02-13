@@ -19,15 +19,14 @@ Plug 'tpope/vim-surround'
 Plug 'altercation/vim-colors-solarized'
 
 " Completion
-Plug 'autozimu/LanguageClient-neovim', { 'branch': 'next', 'do': 'bash install.sh' }
-Plug 'roxma/nvim-completion-manager'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Filetype
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-endwise'
 
 " Filetype - Javascript
-Plug 'elzr/vim-json',              { 'for': 'json' }
+Plug 'elzr/vim-json', { 'for': 'json' }
 
 " Filetype - Docker
 Plug 'ekalinin/Dockerfile.vim', { 'for' : 'Dockerfile'}
