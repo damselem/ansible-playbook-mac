@@ -3,9 +3,12 @@
   hosts: damselem-macbookpro
   pre_tasks:
     - include_tasks: "tasks/pre/{{ ansible_hostname }}.yml"
+
   roles:
-    - ansible-role-homebrew
-    - ansible-role-sshconfig
+    - role: ansible-role-hosts
+    - role: ansible-role-homebrew
+    - role: ansible-role-sshconfig
+
     - role: dotfiles
       homebrew_path: "{{ homebrew_install_path }}"
       homebrew_bin_path: "{{ homebrew_brew_bin_path }}"

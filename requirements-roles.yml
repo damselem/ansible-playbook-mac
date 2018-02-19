@@ -1,5 +1,7 @@
 ---
 - elliotweiser.osx-command-line-tools
+- src: https://github.com/damselem/ansible-role-hosts
+  version: master
 - src: https://github.com/damselem/ansible-role-homebrew
   version: master
 - src: https://github.com/damselem/ansible-role-sshconfig
