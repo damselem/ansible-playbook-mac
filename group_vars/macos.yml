@@ -46,7 +46,7 @@ homebrew_installed_packages:
   - rclone
   - reattach-to-user-namespace
   - ruby-build
-  - rust
+  - rustup-init
   - sqlite
   - sshfs
   - terraform
