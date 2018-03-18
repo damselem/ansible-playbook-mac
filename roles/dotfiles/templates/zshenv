@@ -86,6 +86,11 @@ if which jenv > /dev/null; then
   eval "$(jenv init -)"
 fi
 
+# RUST
+if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
+  PATH=$PATH:$HOME/.cargo/bin
+fi
+
 export PATH
 
 ##########
