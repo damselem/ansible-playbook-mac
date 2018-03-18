@@ -7,6 +7,7 @@ filetype plugin on
 let mapleader="," " Leader for Vim
 set autowriteall " Autosave the file always
 set background=light " Use light background of the colorscheme
+set backspace=indent,eol,start " Allow using backspace to delete characters
 set clipboard=unnamed " Share OS X and Vim clipboard
 set colorcolumn=80 " Display vertical column at 80 characters
 set completeopt=menu,menuone
