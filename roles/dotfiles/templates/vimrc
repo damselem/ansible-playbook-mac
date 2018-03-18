@@ -82,6 +82,7 @@ vnoremap <F1> <ESC>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set rtp+={{ vim_target_dir }}
 call plug#begin('{{ vim_target_dir }}/plugged')
 
 " General
