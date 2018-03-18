@@ -1,17 +1,78 @@
 # vim:syntax=sh
 
-ZSH_DIR={{ dotfiles_target_dir }}/zsh
+###############
+# COMPLETIONS #
+###############
+# Load ZSH completion functions
+fpath=({{ homebrew_path }}/share/zsh-completions $fpath)
 
-source $ZSH_DIR/completions
-source $ZSH_DIR/history
-source $ZSH_DIR/zplug
+# Completion
+autoload -U compinit
+compinit
 
+# GCloud completions
+if [[ -f ~/.google-cloud-sdk/completion.zsh.inc ]]; then
+  source ~/.google-cloud-sdk/completion.zsh.inc
+fi
+
+###########
+# HISTORY #
+###########
+HISTFILE=~/.zsh_history
+SAVEHIST=10000
+HISTSIZE=10000 # Keep TONS of history
+
+setopt APPEND_HISTORY # Adds history
+setopt INC_APPEND_HISTORY # Adds history incrementally
+setopt SHARE_HISTORY # Share it across sessions
+setopt HIST_IGNORE_ALL_DUPS # Don't record dupes in history
+setopt HIST_REDUCE_BLANKS
+setopt EXTENDED_HISTORY # Add timestamps to history
+
+bindkey "^R" history-incremental-search-backward # use incremental search
+bindkey "^P" history-search-backward
+
+###########
+# PLUGINS #
+###########
+export ZPLUG_HOME="${XDG_DATA_HOME}/zplug"
+
+# Alias to the system Git binary in order to initialize zplug
+alias git=/usr/bin/git
+
+source {{ homebrew_path }}/opt/zplug/init.zsh
+
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure", use:pure.zsh, as:theme
+zplug "vasyharan/zsh-brew-services"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+zplug "plugins/gradle", from:oh-my-zsh
+zplug "zsh-users/zsh-completions"
+zplug "felixr/docker-zsh-completion"
+
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+  echo
+fi
+
+zplug load
+
+# Revert previous git alias and rely on the $PATH
+unalias git
+
+##########
+# CONFIG #
+##########
 # makes color constants available
 autoload -U colors
 colors
 
-# enable colored output from ls, etc
-export CLICOLOR=1
+# Override pure prompt color
+PROMPT='%(?.%F{green}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f '
 
 # Initialize FZF settings
 if [[ -f ~/.fzf.zsh ]]; then

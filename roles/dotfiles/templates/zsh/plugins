@@ -1,8 +1,0 @@
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", use:pure.zsh, as:theme
-zplug "vasyharan/zsh-brew-services"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-zplug "plugins/gradle", from:oh-my-zsh
-zplug "zsh-users/zsh-completions"
-zplug "felixr/docker-zsh-completion"

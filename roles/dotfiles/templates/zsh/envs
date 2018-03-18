@@ -1,5 +1,0 @@
-# vim:syntax=sh
-
-source $ZSH_DIR/env/java
-source $ZSH_DIR/env/man
-source $ZSH_DIR/env/tmp

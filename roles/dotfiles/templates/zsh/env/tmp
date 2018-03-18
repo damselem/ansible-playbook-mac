@@ -1,7 +1,0 @@
-# vim:syntax=sh
-
-# Set the TMPDIR explicitly in order to make sure we can use the same
-# Tmux socket when connecting to the workstation through SSH
-#
-# http://stackoverflow.com/questions/9039256/tmux-not-re-attaching
-export TMPDIR=/tmp

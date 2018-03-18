@@ -1,8 +1,7 @@
 ---
 # Dotfiles
 dotfiles_symlinks:
-  - config/nvim
-  - gemrc
+  - config/alacritty
   - git
   - gitconfig
   - gradle
@@ -18,6 +17,7 @@ homebrew_prefix: "{{ ansible_env.HOME }}"
 homebrew_install_path: "{{ homebrew_prefix }}/.homebrew"
 homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"
 homebrew_prefix_owner: "{{ ansible_user_id }}"
+
 homebrew_taps:
   - caskroom/versions
   - caskroom/fonts
@@ -25,6 +25,7 @@ homebrew_taps:
   - homebrew/science
   - homebrew/services
   - damselem/repo
+
 homebrew_installed_packages:
   - awscli
   - bazaar
@@ -39,13 +40,10 @@ homebrew_installed_packages:
   - jenv
   - maven
   - mercurial
-  - neovim
   - nmap
   - pyenv
-  - rbenv
   - rclone
   - reattach-to-user-namespace
-  - ruby-build
   - rustup-init
   - sqlite
   - sshfs
@@ -54,8 +52,10 @@ homebrew_installed_packages:
   - tmux
   - tree
   - upx
+  - vim
   - zlib
   - zplug
+
 homebrew_cask_apps:
   - 1password
   - caffeine
@@ -66,7 +66,6 @@ homebrew_cask_apps:
   - google-cloud-sdk
   - gpg-suite
   - intellij-idea
-  - iterm2
   - java
   - osxfuse
   - rowanj-gitx
@@ -78,4 +77,3 @@ homebrew_cask_apps:
   - visual-studio-code
   - vlc
   - whatsapp
-  - xquartz

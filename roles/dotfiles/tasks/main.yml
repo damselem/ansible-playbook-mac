@@ -34,24 +34,17 @@
     dest: "{{ ansible_env.HOME}}/.{{ item }}"
   with_items: "{{ dotfiles_symlinks }}"
 
-- name: Create Neovim target directory
+- name: Create Vim target directory
   file:
-    path: "{{ nvim_target_dir }}/site/autoload"
+    path: "{{ vim_target_dir }}/site/autoload"
     state: directory
 
-- name: Download vim-plug in Neovim target directory
+- name: Download vim-plug in Vim target directory
   get_url:
     url: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    dest: "{{ nvim_target_dir }}/site/autoload/plug.vim"
+    dest: "{{ vim_target_dir }}/site/autoload/plug.vim"
 
-- name: Install Neovim PIP package
-  pip:
-    name: neovim
-    executable: pip3.6
-  environment:
-    PYENV_VERSION: 3.6.3
-
-- name: Install Neovim plugins
+- name: Install Vim plugins
   shell: "vim +PlugInstall +UpdateRemotePlugins +qa"
   args:
     executable: /bin/zsh

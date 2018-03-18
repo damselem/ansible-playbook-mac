@@ -16,11 +16,133 @@ if [[ -x /usr/libexec/path_helper && -z $PATH_HELPER_EXECUTED ]]; then
   export PATH_HELPER_EXECUTED=true
 fi
 
-ZSH_DIR={{ dotfiles_target_dir }}/zsh
+#######
+# ENV #
+#######
+export XDG_CONFIG_HOME={{ xdg_config_home }}
+export XDG_CACHE_HOME={{ xdg_cache_home }}
+export XDG_DATA_HOME={{ xdg_data_home }}
 
-source $ZSH_DIR/path
-source $ZSH_DIR/config
-source $ZSH_DIR/aliases
+if /usr/libexec/java_home > /dev/null 2>&1; then
+  export JAVA_HOME=$(/usr/libexec/java_home)
+fi
+
+# Less Colors for Man Pages
+# http://linuxtidbits.wordpress.com/2009/03/23/less-colors-for-man-pages/
+export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m'  # begin bold
+export LESS_TERMCAP_me=$'\E[0m'           # end mode
+export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'           # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+# Set the TMPDIR explicitly in order to make sure we can use the same
+# Tmux socket when connecting to the workstation through SSH
+# http://stackoverflow.com/questions/9039256/tmux-not-re-attaching
+export TMPDIR=/tmp
+
+# Use vim as an editor
+export EDITOR=vim
+
+# enable colored output from ls, etc
+export CLICOLOR=1
+
+########
+# PATH #
+########
+# JAVA
+if [[ ":$PATH:" != *":$JAVA_HOME/bin:"* ]]; then
+  PATH=$JAVA_HOME/bin:$PATH
+fi
+
+# HOMEBREW PATH
+if [[ ":$PATH:" != *":{{ homebrew_bin_path }}:"* ]]; then
+  PATH={{ homebrew_bin_path }}:$PATH
+fi
+if [[ ":$PATH:" != *":{{ homebrew_path }}/sbin:"* ]]; then
+  PATH={{ homebrew_path }}/sbin:$PATH
+fi
+
+# GO PATH
+if [[ ":$PATH:" != *":$HOME/go/bin:"* ]]; then
+  PATH=$PATH:$HOME/go/bin
+fi
+
+# GLOUD PATH
+if [[ ":$PATH:" != *":$HOME/.google-cloud-sdk/bin:"* ]]; then
+  PATH=$PATH:$HOME/.google-cloud-sdk/bin
+fi
+
+# PYENV
+if which pyenv > /dev/null; then
+  # Make sure we don't add it twice to the path
+  eval "$(pyenv init -)"
+fi
+
+# JENV
+if which jenv > /dev/null; then
+  # Make sure we don't add it twice to the path
+  eval "$(jenv init -)"
+fi
+
+export PATH
+
+##########
+# CONFIG #
+##########
+# Vi mode
+bindkey -v
+bindkey "^F" vi-cmd-mode
+bindkey jj vi-cmd-mode
+
+# Add some readline keys back
+bindkey "^A" beginning-of-line
+bindkey "^E" end-of-line
+
+# Handy keybindings
+bindkey "^Y" accept-and-hold
+bindkey "^N" insert-last-word
+bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+
+# Automatically pushd
+export dirstacksize=5
+
+# Awesome cd movements from zshkit
+setopt AUTOCD AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
+setopt cdablevars
+
+# Enable extended globbing
+setopt EXTENDED_GLOB
+
+# UTF-8 terminal support
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Disable autocorrection
+unsetopt CORRECT_ALL
+
+# Syntax
+if [[ -f {{ homebrew_path }}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  source {{ homebrew_path }}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
+
+#########
+# ALIAS #
+#########
+alias ls='ls -laGFh'
+
+# Git
+alias gs='git status'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gg="git config user.email 'damselem@google.com'"
+
+# Workspace
+alias wws='cd ~/dev/waze'
+
+# Rclone
+alias 1pass-push='rclone --exclude ".DS_Store" copy /Volumes/GoogleDrive/Sync/1Password dropbox:1Password -v'
+alias 1pass-pull='rclone --exclude ".DS_Store" copy dropbox:1Password /Volumes/GoogleDrive/Sync/1Password -v'
 
 # Copy the buit path so we can restore it in .zprofile after /etc/zprofile runs
 export ZSH_ENV_PATH=$PATH
