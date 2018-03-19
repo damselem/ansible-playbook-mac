@@ -9,8 +9,8 @@
 # - ~/.zshrc
 
 # Since /etc/zshenv does not exist, we load the initial paths using path_helper
-# If ZSH_ENV_PATH is defined, it means that path_helper was already executed
-
+# If PATH_HELPER_EXECUTED is defined, it means that path_helper was already
+# executed
 if [[ -x /usr/libexec/path_helper && -z $PATH_HELPER_EXECUTED ]]; then
   eval `/usr/libexec/path_helper -s`
   export PATH_HELPER_EXECUTED=true
@@ -65,17 +65,17 @@ if [[ ":$PATH:" != *":$HOME/.google-cloud-sdk/bin:"* ]]; then
   PATH=$PATH:$HOME/.google-cloud-sdk/bin
 fi
 
-# PYENV
-if which pyenv > /dev/null; then
-  # Make sure we don't add it twice to the path
-  eval "$(pyenv init -)"
-fi
+# PYENV - Lazy loaded
+pyenv() {
+  eval "$(command pyenv init -)"
+  pyenv "$@"
+}
 
-# JENV
-if which jenv > /dev/null; then
-  # Make sure we don't add it twice to the path
-  eval "$(jenv init -)"
-fi
+# JENV - Laze loaded
+jenv() {
+  eval "$(command jenv init -)"
+  jenv "$@"
+}
 
 # RUST
 if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then

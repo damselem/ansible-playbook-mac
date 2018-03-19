@@ -35,34 +35,19 @@ bindkey "^P" history-search-backward
 ###########
 # PLUGINS #
 ###########
-export ZPLUG_HOME="${XDG_DATA_HOME}/zplug"
+source "${HOME}/.zgen/zgen.zsh"
 
-# Alias to the system Git binary in order to initialize zplug
-alias git=/usr/bin/git
+if ! zgen saved; then
+	zgen load "mafredri/zsh-async"
+	zgen load "sindresorhus/pure"
+	zgen load "vasyharan/zsh-brew-services"
+	zgen load "zsh-users/zsh-syntax-highlighting"
 
-source {{ homebrew_path }}/opt/zplug/init.zsh
+	zgen load "zsh-users/zsh-completions"
+	zgen load "felixr/docker-zsh-completion"
 
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure", use:pure.zsh, as:theme
-zplug "vasyharan/zsh-brew-services"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-
-zplug "plugins/gradle", from:oh-my-zsh
-zplug "zsh-users/zsh-completions"
-zplug "felixr/docker-zsh-completion"
-
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-  echo
+  zgen save
 fi
-
-zplug load
-
-# Revert previous git alias and rely on the $PATH
-unalias git
 
 ##########
 # CONFIG #

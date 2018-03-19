@@ -31,8 +31,18 @@
     state: link
     force: yes
     src: "{{ dotfiles_target_dir }}/{{ item }}"
-    dest: "{{ ansible_env.HOME}}/.{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.{{ item }}"
   with_items: "{{ dotfiles_symlinks }}"
+
+- name: Create zgen directory
+  file:
+    path: "{{ ansible_env.HOME }}/.zgen"
+    state: directory
+
+- name: Install zgen
+  git:
+    repo: https://github.com/tarjoilija/zgen.git
+    dest: "{{ ansible_env.HOME }}/.zgen"
 
 - name: Create Vim target directory
   file:
