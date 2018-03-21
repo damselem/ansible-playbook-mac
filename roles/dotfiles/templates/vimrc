@@ -13,6 +13,7 @@ set colorcolumn=80 " Display vertical column at 80 characters
 set completeopt=menu,menuone
 set encoding=utf-8
 set expandtab
+set hlsearch " Highlight search matches
 set ignorecase " Case-insensitive searching
 set laststatus=2
 set lazyredraw
