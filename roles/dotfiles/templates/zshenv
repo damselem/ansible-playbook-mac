@@ -71,11 +71,9 @@ pyenv() {
   pyenv "$@"
 }
 
-# JENV - Laze loaded
-jenv() {
-  eval "$(command jenv init -)"
-  jenv "$@"
-}
+# JENV
+eval "$(jenv init - --no-rehash)"
+(jenv rehash &) 2> /dev/null
 
 # RUST
 if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
