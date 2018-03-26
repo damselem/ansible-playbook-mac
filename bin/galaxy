@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-/usr/bin/env ansible-galaxy install -r requirements-roles.yml
+/usr/bin/env ansible-galaxy install -f -r requirements-roles.yml
 # /usr/bin/env ansible-galaxy install -p .galaxy/library -r requirements-libraries.yml
