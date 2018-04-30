@@ -72,8 +72,10 @@ pyenv() {
 }
 
 # JENV
-eval "$(jenv init - --no-rehash)"
-(jenv rehash &) 2> /dev/null
+if [[ ":$PATH:" != *":$HOME/.jenv/shims:"* ]]; then
+  eval "$(jenv init - --no-rehash)"
+  (jenv rehash &) 2> /dev/null
+fi
 
 # RUST
 if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
