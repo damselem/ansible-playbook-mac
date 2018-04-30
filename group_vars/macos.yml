@@ -67,6 +67,7 @@ homebrew_cask_apps:
   - gpg-suite
   - intellij-idea
   - java
+  - java8
   - osxfuse
   - rowanj-gitx
   - sizeup
