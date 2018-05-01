@@ -2,10 +2,9 @@
 # Dotfiles
 dotfiles_symlinks:
   - config/alacritty
-  - git
-  - gitconfig
+  - config/git
+  - config/jupyter
   - gradle
-  - jupyter
   - tmux.conf
   - vimrc
   - zprofile

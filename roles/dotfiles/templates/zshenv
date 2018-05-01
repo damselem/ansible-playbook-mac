@@ -44,6 +44,9 @@ export EDITOR=vim
 # enable colored output from ls, etc
 export CLICOLOR=1
 
+# Jupyter config directory
+export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
+
 ########
 # PATH #
 ########
@@ -80,6 +83,11 @@ fi
 # RUST
 if [[ ":$PATH:" != *":$HOME/.cargo/bin:"* ]]; then
   PATH=$PATH:$HOME/.cargo/bin
+fi
+
+# CUSTOM SCRIPTS
+if [[ ":$PATH:" != *":$XDG_DATA_HOME/bin:"* ]]; then
+  PATH=$PATH:$XDG_DATA_HOME/bin
 fi
 
 export PATH
