@@ -43,6 +43,7 @@ homebrew_installed_packages:
   - pyenv
   - rclone
   - reattach-to-user-namespace
+  - ripgrep
   - rustup-init
   - sqlite
   - sshfs
