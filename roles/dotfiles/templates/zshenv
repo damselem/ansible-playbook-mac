@@ -144,9 +144,5 @@ alias gg="git config user.email 'damselem@google.com'"
 # Workspace
 alias wws='cd ~/dev/waze'
 
-# Rclone
-alias 1pass-push='rclone --exclude ".DS_Store" copy /Volumes/GoogleDrive/Sync/1Password dropbox:1Password -v'
-alias 1pass-pull='rclone --exclude ".DS_Store" copy dropbox:1Password /Volumes/GoogleDrive/Sync/1Password -v'
-
 # Copy the buit path so we can restore it in .zprofile after /etc/zprofile runs
 export ZSH_ENV_PATH=$PATH

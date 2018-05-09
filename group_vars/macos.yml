@@ -41,7 +41,6 @@ homebrew_installed_packages:
   - mercurial
   - nmap
   - pyenv
-  - rclone
   - reattach-to-user-namespace
   - ripgrep
   - rustup-init
