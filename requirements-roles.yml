@@ -6,3 +6,5 @@
   version: master
 - src: https://github.com/damselem/ansible-role-sshconfig
   version: master
+- src: https://github.com/damselem/ansible-role-dotfiles
+  version: master

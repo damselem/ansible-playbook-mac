@@ -77,3 +77,6 @@ homebrew_cask_apps:
   - visual-studio-code
   - vlc
   - whatsapp
+
+zsh_syntax_highlighting_dir: "{{ homebrew_path }}/share/zsh-syntax-highlighting"
+zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"

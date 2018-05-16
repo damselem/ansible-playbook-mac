@@ -6,7 +6,6 @@
     - role: ansible-role-hosts
     - role: ansible-role-homebrew
     - role: ansible-role-sshconfig
-
-    - role: dotfiles
+    - role: ansible-role-dotfiles
       homebrew_path: "{{ homebrew_install_path }}"
       homebrew_bin_path: "{{ homebrew_brew_bin_path }}"
