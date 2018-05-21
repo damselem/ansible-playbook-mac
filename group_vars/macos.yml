@@ -53,7 +53,6 @@ homebrew_installed_packages:
   - upx
   - vim
   - zlib
-  - zplug
 
 homebrew_cask_apps:
   - 1password
@@ -78,5 +77,4 @@ homebrew_cask_apps:
   - vlc
   - whatsapp
 
-zsh_syntax_highlighting_dir: "{{ homebrew_path }}/share/zsh-syntax-highlighting"
 zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"
