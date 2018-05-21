@@ -42,8 +42,6 @@ homebrew_installed_packages:
   - nmap
   - pyenv
   - reattach-to-user-namespace
-  - ripgrep
-  - rustup-init
   - sqlite
   - sshfs
   - terraform
