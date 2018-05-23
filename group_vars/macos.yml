@@ -75,4 +75,16 @@ homebrew_cask_apps:
   - vlc
   - whatsapp
 
+cargo_items:
+  - racer
+  - ripgrep
+
+rustup_toolchains:
+  - stable
+  - nightly
+
+rustup_components:
+  - rustfmt-preview
+  - rust-src
+
 zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"
