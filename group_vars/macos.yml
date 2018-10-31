@@ -3,6 +3,7 @@
 dotfiles_symlinks:
   - config/git
   - config/jupyter
+  - local/share/bin/git-status
   - gradle
   - tmux.conf
   - vimrc
