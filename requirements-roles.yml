@@ -8,5 +8,3 @@
   version: master
 - src: https://github.com/damselem/ansible-role-dotfiles
   version: master
-- src: https://github.com/damselem/ansible-role-rust
-  version: master

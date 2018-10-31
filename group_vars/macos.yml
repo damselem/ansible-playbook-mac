@@ -1,7 +1,6 @@
 ---
 # Dotfiles
 dotfiles_symlinks:
-  - config/alacritty
   - config/git
   - config/jupyter
   - gradle
@@ -36,7 +35,6 @@ homebrew_installed_packages:
   - gpg2
   - gradle
   - jdt-language-server
-  - jenv
   - maven
   - mercurial
   - nmap
@@ -44,7 +42,6 @@ homebrew_installed_packages:
   - reattach-to-user-namespace
   - sqlite
   - sshfs
-  - terraform
   - tldr
   - tmux
   - tree
@@ -58,7 +55,6 @@ homebrew_cask_apps:
   - docker
   - firefox
   - flux
-  - font-dejavu-sans
   - google-cloud-sdk
   - gpg-suite
   - intellij-idea
@@ -69,22 +65,8 @@ homebrew_cask_apps:
   - sizeup
   - telegram
   - the-unarchiver
-  - vagrant
-  - virtualbox
   - visual-studio-code
   - vlc
   - whatsapp
-
-cargo_items:
-  - racer
-  - ripgrep
-
-rustup_toolchains:
-  - stable
-  - nightly
-
-rustup_components:
-  - rustfmt-preview
-  - rust-src
 
 zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"
