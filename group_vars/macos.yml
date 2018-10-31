@@ -56,9 +56,6 @@ homebrew_cask_apps:
   - flux
   - google-cloud-sdk
   - gpg-suite
-  - intellij-idea
-  - java
-  - java8
   - netspot
   - osxfuse
   - rowanj-gitx
