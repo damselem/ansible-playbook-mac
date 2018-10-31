@@ -59,6 +59,7 @@ homebrew_cask_apps:
   - intellij-idea
   - java
   - java8
+  - netspot
   - osxfuse
   - rowanj-gitx
   - sizeup
