@@ -5,9 +5,9 @@ ansible_connection: local
 ansible_user: damselem
 
 # Homebrew
-homebrew_prefix_group: eng
-homebrew_install_path_group: eng
-homebrew_brew_bin_path_group: eng
+homebrew_prefix_group: primarygroup
+homebrew_install_path_group: primarygroup
+homebrew_brew_bin_path_group: primarygroup
 
 # SSH
-ssh_config_group: eng
+ssh_config_group: primarygroup

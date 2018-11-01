@@ -26,7 +26,6 @@ homebrew_taps:
 homebrew_installed_packages:
   - awscli
   - bazaar
-  - chromedriver
   - coreutils
   - docker
   - docker-compose
@@ -51,15 +50,18 @@ homebrew_installed_packages:
 homebrew_cask_apps:
   - 1password
   - caffeine
+  - chromedriver
   - docker
   - firefox
   - flux
   - google-cloud-sdk
   - gpg-suite
+  - iterm2
   - netspot
   - osxfuse
   - rowanj-gitx
   - sizeup
+  - spotify
   - telegram
   - the-unarchiver
   - visual-studio-code
