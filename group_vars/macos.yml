@@ -68,4 +68,5 @@ homebrew_cask_apps:
   - vlc
   - whatsapp
 
+tmux_bin_path: "{{ homebrew_brew_bin_path }}"
 zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"
