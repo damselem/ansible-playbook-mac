@@ -1,6 +1,7 @@
 ---
 # Dotfiles
 dotfiles_symlinks:
+  - config/alacritty
   - config/git
   - config/jupyter
   - local/share/bin/git-status
@@ -49,6 +50,7 @@ homebrew_installed_packages:
 
 homebrew_cask_apps:
   - 1password
+  - alacritty
   - caffeine
   - chromedriver
   - docker
@@ -56,6 +58,7 @@ homebrew_cask_apps:
   - flux
   - font-dejavu-sans
   - google-cloud-sdk
+  - google-drive-file-stream
   - gpg-suite
   - iterm2
   - netspot
