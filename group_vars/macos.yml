@@ -61,6 +61,7 @@ homebrew_cask_apps:
   - google-drive-file-stream
   - gpg-suite
   - iterm2
+  - karabiner-elements
   - netspot
   - osxfuse
   - rowanj-gitx
