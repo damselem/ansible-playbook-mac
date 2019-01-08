@@ -4,6 +4,7 @@ dotfiles_symlinks:
   - config/alacritty
   - config/git
   - config/jupyter
+  - config/karabiner/karabiner
   - local/share/bin/git-status
   - gradle
   - tmux.conf
