@@ -19,10 +19,3 @@ bin/galaxy
 ```
 ansible-playbook playbook.yml
 ```
-
-## Run playbook in development
-
-```
-vagrant up
-ansible-playbook playbook.yml
-```
