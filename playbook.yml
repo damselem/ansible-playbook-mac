@@ -1,11 +1,9 @@
 ---
 - name: Mac OS X Ansible play
-  hosts: damselem-macbookpro
+  hosts: macos 
 
   roles:
     - role: ansible-role-hosts
     - role: ansible-role-homebrew
     - role: ansible-role-sshconfig
     - role: ansible-role-dotfiles
-      homebrew_path: "{{ homebrew_install_path }}"
-      homebrew_bin_path: "{{ homebrew_brew_bin_path }}"

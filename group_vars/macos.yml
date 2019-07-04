@@ -3,10 +3,8 @@
 dotfiles_symlinks:
   - config/alacritty
   - config/git
-  - config/jupyter
   - config/karabiner/karabiner
   - local/share/bin/git-status
-  - gradle
   - tmux.conf
   - vimrc
   - zprofile
@@ -26,16 +24,11 @@ homebrew_taps:
   - damselem/repo
 
 homebrew_installed_packages:
-  - awscli
   - bazaar
   - coreutils
-  - docker
-  - docker-compose
   - go
   - gpg2
-  - gradle
   - jdt-language-server
-  - maven
   - mercurial
   - nmap
   - pyenv
@@ -53,19 +46,14 @@ homebrew_cask_apps:
   - 1password
   - alacritty
   - caffeine
-  - chromedriver
-  - docker
   - firefox
   - flux
   - font-dejavu-sans
-  - google-cloud-sdk
   - google-drive-file-stream
   - gpg-suite
-  - iterm2
   - karabiner-elements
   - netspot
   - osxfuse
-  - rowanj-gitx
   - sizeup
   - spotify
   - telegram
@@ -75,4 +63,4 @@ homebrew_cask_apps:
   - whatsapp
 
 tmux_bin_path: "{{ homebrew_brew_bin_path }}"
-zsh_completions_dir: "{{ homebrew_path }}/share/zsh-completions"
+zsh_completions_dir: "{{ homebrew_install_path }}/share/zsh-completions"
