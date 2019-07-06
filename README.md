@@ -18,4 +18,5 @@ bin/galaxy
 
 ```
 ansible-playbook playbook.yml
+ansible-playbook -l damselem-macmini playbook.yml
 ```
