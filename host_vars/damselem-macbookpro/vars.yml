@@ -8,6 +8,48 @@ ansible_user: damselem
 homebrew_prefix_group: primarygroup
 homebrew_install_path_group: primarygroup
 homebrew_brew_bin_path_group: primarygroup
+homebrew_taps:
+  - caskroom/versions
+  - caskroom/fonts
+  - homebrew/services
+  - damselem/repo
+homebrew_installed_packages:
+  - bazaar
+  - coreutils
+  - go
+  - gpg2
+  - jdt-language-server
+  - mercurial
+  - nmap
+  - pyenv
+  - reattach-to-user-namespace
+  - sqlite
+  - sshfs
+  - tldr
+  - tmux
+  - tree
+  - upx
+  - vim
+  - zlib
+homebrew_cask_apps:
+  - 1password
+  - alacritty
+  - caffeine
+  - firefox
+  - flux
+  - font-dejavu-sans
+  - google-drive-file-stream
+  - gpg-suite
+  - karabiner-elements
+  - netspot
+  - osxfuse
+  - sizeup
+  - spotify
+  - telegram
+  - the-unarchiver
+  - visual-studio-code
+  - vlc
+  - whatsapp
 
 # SSH
 ssh_config_group: primarygroup

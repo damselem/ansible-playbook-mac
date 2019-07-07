@@ -17,50 +17,5 @@ homebrew_install_path: "{{ homebrew_prefix }}/.homebrew"
 homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"
 homebrew_prefix_owner: "{{ ansible_user_id }}"
 
-homebrew_taps:
-  - caskroom/versions
-  - caskroom/fonts
-  - homebrew/services
-  - damselem/repo
-
-homebrew_installed_packages:
-  - bazaar
-  - coreutils
-  - go
-  - gpg2
-  - jdt-language-server
-  - mercurial
-  - nmap
-  - pyenv
-  - reattach-to-user-namespace
-  - sqlite
-  - sshfs
-  - tldr
-  - tmux
-  - tree
-  - upx
-  - vim
-  - zlib
-
-homebrew_cask_apps:
-  - 1password
-  - alacritty
-  - caffeine
-  - firefox
-  - flux
-  - font-dejavu-sans
-  - google-drive-file-stream
-  - gpg-suite
-  - karabiner-elements
-  - netspot
-  - osxfuse
-  - sizeup
-  - spotify
-  - telegram
-  - the-unarchiver
-  - visual-studio-code
-  - vlc
-  - whatsapp
-
 tmux_bin_path: "{{ homebrew_brew_bin_path }}"
 zsh_completions_dir: "{{ homebrew_install_path }}/share/zsh-completions"

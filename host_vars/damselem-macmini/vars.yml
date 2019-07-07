@@ -8,6 +8,33 @@ ansible_user: damselem
 homebrew_prefix_group: staff
 homebrew_install_path_group: staff
 homebrew_brew_bin_path_group: staff
+homebrew_taps:
+  - caskroom/fonts
+  - caskroom/versions
+  - damselem/repo
+  - homebrew/cask-drivers
+  - homebrew/services
+homebrew_installed_packages:
+  - coreutils
+  - mercurial
+  - netdata
+  - reattach-to-user-namespace
+  - sqlite
+  - subliminal
+  - tmux
+  - tree
+  - vim
+  - zlib
+homebrew_cask_apps:
+  - 1password
+  - alacritty
+  - caffeine
+  - google-chrome
+  - font-dejavu-sans
+  - karabiner-elements
+  - plex-media-server
+  - sizeup
+  - the-unarchiver
 
 # SSH
 ssh_config_group: staff

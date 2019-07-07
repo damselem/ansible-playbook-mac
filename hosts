@@ -1,3 +1,6 @@
 [macos]
 damselem-macbookpro
 damselem-macmini
+
+[macos-server]
+damselem-macmini
