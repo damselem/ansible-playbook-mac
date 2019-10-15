@@ -29,12 +29,12 @@ homebrew_cask_apps:
   - 1password
   - alacritty
   - caffeine
-  - google-chrome
   - font-dejavu-sans
+  - google-chrome
   - karabiner-elements
+  - keka
   - plex-media-server
   - sizeup
-  - the-unarchiver
 
 # SSH
 ssh_config_group: staff

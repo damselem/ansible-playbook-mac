@@ -41,12 +41,12 @@ homebrew_cask_apps:
   - google-drive-file-stream
   - gpg-suite
   - karabiner-elements
+  - keka
   - netspot
   - osxfuse
   - sizeup
   - spotify
   - telegram
-  - the-unarchiver
   - visual-studio-code
   - vlc
   - whatsapp
