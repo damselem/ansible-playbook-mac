@@ -45,7 +45,6 @@ homebrew_cask_apps:
   - netspot
   - osxfuse
   - sizeup
-  - spotify
   - telegram
   - visual-studio-code
   - vlc
