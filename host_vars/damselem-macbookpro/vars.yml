@@ -9,8 +9,8 @@ homebrew_prefix_group: primarygroup
 homebrew_install_path_group: primarygroup
 homebrew_brew_bin_path_group: primarygroup
 homebrew_taps:
-  - caskroom/versions
-  - caskroom/fonts
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
   - homebrew/services
   - damselem/repo
 homebrew_installed_packages:
