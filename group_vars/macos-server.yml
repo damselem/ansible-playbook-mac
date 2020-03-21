@@ -1,4 +1,4 @@
 # Autofs
-nas_host: "192.168.86.220"
+nas_host: "192.168.1.23"
 nfs_mount_root: "/Volumes/"
 nfs_mount_root_dir: "nas"

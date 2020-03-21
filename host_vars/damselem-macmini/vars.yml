@@ -35,6 +35,7 @@ homebrew_cask_apps:
   - keka
   - plex-media-server
   - sizeup
+  - ubiquiti-unifi-controller
 
 # SSH
 ssh_config_group: staff
