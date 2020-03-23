@@ -27,10 +27,10 @@ homebrew_installed_packages:
   - zlib
 homebrew_cask_apps:
   - 1password
-  - alacritty
   - caffeine
   - font-dejavu-sans
   - google-chrome
+  - iterm2
   - karabiner-elements
   - keka
   - plex-media-server

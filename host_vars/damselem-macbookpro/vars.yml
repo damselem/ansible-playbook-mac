@@ -33,13 +33,13 @@ homebrew_installed_packages:
   - zlib
 homebrew_cask_apps:
   - 1password
-  - alacritty
   - caffeine
   - firefox
   - flux
   - font-dejavu-sans
   - google-drive-file-stream
   - gpg-suite
+  - iterm2
   - karabiner-elements
   - keka
   - netspot
