@@ -17,7 +17,6 @@ homebrew_installed_packages:
   - bazaar
   - coreutils
   - go
-  - gpg2
   - jdt-language-server
   - mercurial
   - nmap
@@ -39,7 +38,6 @@ homebrew_cask_apps:
   - flux
   - font-dejavu-sans
   - google-drive-file-stream
-  - gpg-suite
   - iterm2
   - karabiner-elements
   - keka
