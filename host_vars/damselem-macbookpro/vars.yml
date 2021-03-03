@@ -36,7 +36,6 @@ homebrew_cask_apps:
   - cleanshot
   - firefox
   - flux
-  - font-dejavu-sans
   - google-drive-file-stream
   - iterm2
   - karabiner-elements
