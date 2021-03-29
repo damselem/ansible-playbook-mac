@@ -4,14 +4,9 @@
 
   roles:
     - role: ansible-role-hosts
-    - role: ansible-role-homebrew
+    # - role: ansible-role-homebrew
     - role: ansible-role-sshconfig
     - role: ansible-role-dotfiles
-
-- name: macOS NAS play
-  hosts: macos-server
-
-  roles:
     - role: cmprescott.autofs_ng
       become: True
       autofs_indirect_maps:
@@ -20,11 +15,8 @@
           mounts:
             - name: "{{ nfs_mount_root_dir }}"
               fstype: "nfs,rw,insecure,all_squash"
-              url: "{{ nas_host }}:/volume1/nas"
+              url: "{{ nas_host }}:/volume1/media"
 
-  tasks:
-    - name: Create cron task to download subtitles
-      cron:
-        name: Download subtitles
-        minute: 0
-        job: "subliminal download -l en -v /Volumes/nas/media"
+
+- name: macOS NAS play
+  hosts: macos-server

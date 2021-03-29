@@ -17,5 +17,10 @@ homebrew_install_path: "{{ homebrew_prefix }}/.homebrew"
 homebrew_brew_bin_path: "{{ homebrew_install_path }}/bin"
 homebrew_prefix_owner: "{{ ansible_user_id }}"
 
+# Autofs
+nas_host: "192.168.1.56"
+nfs_mount_root: "/Users/Share"
+nfs_mount_root_dir: "media"
+
 tmux_bin_path: "{{ homebrew_brew_bin_path }}"
 zsh_completions_dir: "{{ homebrew_install_path }}/share/zsh-completions"
